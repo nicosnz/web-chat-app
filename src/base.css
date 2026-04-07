@@ -1,3 +1,4 @@
+@import "./vendor/fonts.css";
 :root{
     --bg-color: #FFFFFF;
     --link-color  :#3369F3;
@@ -5,4 +6,23 @@
     --title-color:#1E1E1E;
     --bg-color-opacity:#EFEFEF;
     
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+
+}
+body {
+  font-family: "Inter";
+  background-color: var(--bg-color);
+  color: #111111;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
 }

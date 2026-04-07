@@ -1,0 +1,4 @@
+@import "./src/vendor/normalize.css";
+@import "./src/base.css";
+@import "./src/components/formLogin/FormLogin.css";
+@import "./src/components/formRegister/FormRegister.css";
