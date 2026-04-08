@@ -9,11 +9,11 @@
     margin-top: 3rem;
     box-shadow: 0 0 3px 0 #0007;
 }
-.form_title-register{
+.form-register__title{
     text-align: center;
     font-weight: 400;
 }
-.form_input-register{
+.form-register__input{
     margin: 3px;
     padding: 4px 5px;
     border:none;
@@ -22,7 +22,7 @@
     text-align: left;
     width: 100%;
 }
-.form_input_submit-register{
+.form-register__input_submit{
     background-color: var(--link-color);
     color: white;
     border-radius: 1.5rem;
@@ -34,7 +34,7 @@
     width: 100%;
 
 }
-.form_link-register{
+.form-register__link{
     color: var(--link-color);
     cursor: pointer;
     font-size: 1.4rem;
