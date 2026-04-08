@@ -1,0 +1,13 @@
+.chat-general{
+    display: flex;
+
+}
+.chat-general__aviso{
+    margin: auto;
+    text-align: center;
+}
+
+.chat-general__texto{
+    font-size: 1.8rem;
+    color: var(--color-text-msj);
+}

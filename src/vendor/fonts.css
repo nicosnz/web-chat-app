@@ -8,3 +8,8 @@
     src: url(fonts/Inter_18pt-Black.ttf) format("truetype");
     font-weight: 900;
 }
+@font-face {
+    font-family: "Inter";
+    src: url(fonts/Inter_18pt-Bold.ttf) format("truetype");
+    font-weight: 700;
+}

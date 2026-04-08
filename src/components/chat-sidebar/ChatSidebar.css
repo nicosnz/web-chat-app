@@ -1,0 +1,30 @@
+.chat-sidebar{
+    width: 31rem;
+    padding: 1rem;
+    border-right: 1px solid var(--bg-color-opacity);
+    background-color: #FBFBFB;
+}
+
+.chat-sidebar__links{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 3rem;
+}
+
+.chat-sidebar__perfil{
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--color-text-msj);
+    margin-top: 1.5rem;
+}
+.chat-sidebar__buscador{
+    padding: 7px 5px;
+    border:none;
+    outline: none;
+    text-align: center;
+    background-color: var(--bg-color-opacity);
+    border-radius: .5rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}

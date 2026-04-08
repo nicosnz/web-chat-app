@@ -2,3 +2,6 @@
 @import "./src/base.css";
 @import "./src/components/formLogin/FormLogin.css";
 @import "./src/components/formRegister/FormRegister.css";
+@import "./src/components/chat-box/ChatBox.css";
+@import "./src/components/chat-sidebar/ChatSidebar.css";
+@import "./src/components/chat-general/ChatGeneral.css";

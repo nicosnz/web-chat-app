@@ -1,0 +1,72 @@
+.chatbox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 -1rem; 
+
+    padding: 1rem ;
+    border-bottom: 1px solid var(--bg-color-opacity);
+    text-decoration: none;
+}
+.chatbox:hover{
+    background-color: var(--chatbox-hover);
+}
+.chatbox:first-child{
+    
+    border-top: 1px solid var(--bg-color-opacity);
+}
+.chatbox__left {
+  display: flex;
+  align-items:center;
+  gap: 1rem;
+}
+
+.chatbox__perfil{
+    width:4.7rem ;
+    height:4.7rem ;
+    border-radius: 50%;
+    background-color: var(--bg-color-opacity);
+}
+.chatbox__contacto{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.chatbox__mensajes{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: end;
+}
+.chatbox__nombre{
+    margin: 0;
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 700;
+    
+}
+.chatbox__mensaje{
+    margin: 0;
+    color: var(--color-text-msj);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+.chatbox__hora{
+    margin: 0;
+    font-size: 1.3rem;
+    color: var(--color-text-msj);
+}
+.chatbox__nro-mensajes{
+    margin: 0;
+    background-color: var(--link-color);
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -5,6 +5,8 @@
     --error-color: #FF2F2F;
     --title-color:#1E1E1E;
     --bg-color-opacity:#EFEFEF;
+    --color-text-msj:#999999;
+    --chatbox-hover:#E4EDFD
     
 }
 *, *::before, *::after {
