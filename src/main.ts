@@ -8,6 +8,8 @@ import "./components/chat-sidebar/ChatSidebar";
 import "./components/chat-box/ChatBox";
 import "./pages/AppChatGeneral";
 import "./pages/AppChatUser";
+import "./pages/AppPerfil";
+import "./pages/404";
 
 
 router.init();

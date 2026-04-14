@@ -9,10 +9,22 @@ export class AppChatUser extends HTMLElement {
     connectedCallback(){
         this.innerHTML = `
             <div class="chat-user">
-                <div class="chat-user__chatbox">
-                    <div class="chat-user__perfil"></div>
-                    <p class="chat-user__nombre">Andrey</p>
+                <div class = "chat-user__header">
+                    <div class="chat-user__chatbox">
+                        <div class="chat-user__perfil"></div>
+                        <p class="chat-user__nombre">Andrey</p>
+                    </div>
+                    <button class = "chat-user__menu">
+                        <svg width="3" height="15" viewBox="0 0 3 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="1.5" cy="1.5" r="1.5" fill="#1E1E1E"/>
+                            <circle cx="1.5" cy="7.5" r="1.5" fill="#1E1E1E"/>
+                            <circle cx="1.5" cy="13.5" r="1.5" fill="#1E1E1E"/>
+                        </svg>
+                    
+                    </button>
+                
                 </div>
+                    
                 <div class="chat-user__mensajes">
                     
                     
@@ -103,7 +115,7 @@ export class AppChatUser extends HTMLElement {
         
         
         `;
-        const container = this.querySelector('.chat-user__container')!;
+        const container = this.querySelector('.chat-user__container')!  ;
         container.scrollTop = container.scrollHeight;
     }
 }

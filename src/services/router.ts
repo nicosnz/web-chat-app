@@ -37,11 +37,12 @@ export const router = {
         let page;
 
         if(component){
-        page = document.createElement(component);
+            page = document.createElement(component);
         }
         else{
-        page = document.createElement("h1");
-        page.textContent = "404";
+            const sidebar = document.querySelector(".chat-sidebar");
+            sidebar?.classList.add("chat-sidebar--oculto")
+            page = document.createElement("app-not-found");
         }
         app.appendChild(page);
 

@@ -1,0 +1,22 @@
+.not-found{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.not-found__text-title{
+    margin: 0;
+    font-size: 4rem;
+}
+.not-found__text-content{
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+.not-found__link{
+    text-decoration: none;
+    color: var(--link-color);
+    font-size: 1.6rem;
+}

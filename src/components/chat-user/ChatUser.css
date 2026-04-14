@@ -3,13 +3,32 @@
     flex-direction: column;
     height: 100vh;
 }
+.chat-user__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 1rem;
+    border-bottom: 1px solid var(--bg-color-opacity);
+}
 .chat-user__chatbox{
     display: flex;
     gap: 2rem;
-    border-bottom: 1px solid var(--bg-color-opacity);
     align-items: center;
-    padding: 1rem;
 
+}
+.chat-user__menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.chat-user__menu:hover{
+    background-color: var(--bg-color-opacity);
 }
 .chat-user__perfil{
     width:4.7rem ;
