@@ -1,8 +1,14 @@
 .chat-sidebar{
     width: 31rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
     border-right: 1px solid var(--bg-color-opacity);
     background-color: #FBFBFB;
+}
+.chat-sidebar--oculto{
+    display: none;
 }
 
 .chat-sidebar__links{
@@ -27,4 +33,14 @@
     border-radius: .5rem;
     width: 100%;
     margin-bottom: 1rem;
+}
+.chat-sidebar__chats{
+    flex: 1;              /* ocupa el espacio restante */
+    overflow-y: auto;     /* SOLO aquí hay scroll */
+
+    scrollbar-width: none;
+}
+
+.chat-sidebar__chats::-webkit-scrollbar{
+    display: none;
 }

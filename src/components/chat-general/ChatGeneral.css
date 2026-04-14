@@ -1,11 +1,13 @@
 .chat-general{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
 
 }
-.chat-general__aviso{
-    margin: auto;
-    text-align: center;
-}
+
 
 .chat-general__texto{
     font-size: 1.8rem;

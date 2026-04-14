@@ -6,6 +6,7 @@ export class ChatSidebar extends HTMLElement {
         
     }
     connectedCallback(){
+        
         this.innerHTML = `
             <div class="chat-sidebar">
                 <div class="chat-sidebar__links">
@@ -14,19 +15,7 @@ export class ChatSidebar extends HTMLElement {
                 </div>
                 
                 
-                <div class="chat-sidebar__chats">
-                    <app-chat-box></app-chat-box>
-                    <app-chat-box></app-chat-box>
-                    <app-chat-box></app-chat-box>
-                    <app-chat-box></app-chat-box>
-                    <app-chat-box></app-chat-box>
-                    <app-chat-box></app-chat-box>
-                    <app-chat-box></app-chat-box>
-                    <app-chat-box></app-chat-box>
-                    <app-chat-box></app-chat-box>
-                    
-                
-                </div>
+                <div class="chat-sidebar__chats"></div>
             </div>
         
         

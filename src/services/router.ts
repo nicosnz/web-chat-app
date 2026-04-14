@@ -19,9 +19,14 @@ export const router = {
         router.go(location.pathname as Route || "/", false);
     },
     go(route:Route,addHistory = true):void{
+        if(route === "/login" || route==="/register"){
+            const sidebar = document.querySelector(".chat-sidebar");
+            sidebar?.classList.add("chat-sidebar--oculto")
+        }
         if(addHistory){
             history.pushState({route}, "", route);
         }
+        
 
         const app = document.querySelector("#app") as HTMLDivElement
 

@@ -6,7 +6,9 @@
     --title-color:#1E1E1E;
     --bg-color-opacity:#EFEFEF;
     --color-text-msj:#999999;
-    --chatbox-hover:#E4EDFD
+    --chatbox-hover: #E4EDFD;
+    --chat-msj-rem-bg: #F8F8F8;
+    --chat-msj-personal-bg:#E4EDFD;
     
 }
 *, *::before, *::after {
@@ -27,4 +29,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1.6rem;
+}
+.layout{
+    display: flex;
+}
+#app {
+  flex: 1;
+  
 }

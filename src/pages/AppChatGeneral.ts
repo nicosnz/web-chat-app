@@ -10,11 +10,8 @@ export class AppChatGeneral extends HTMLElement {
     connectedCallback(){
         this.innerHTML = `
             <div class="chat-general">
-                <app-chat-sidebar></app-chat-sidebar>
-                <div class="chat-general__aviso">
-                    <img class="chat-general__imagen" src="${union}">
-                    <p class="chat-general__texto">Elige un chat para enviar el mensaje</p>
-                </div>
+                <img class="chat-general__imagen" src="${union}">
+                <p class="chat-general__texto">Elige un chat para enviar el mensaje</p>
             </div>
         
         
