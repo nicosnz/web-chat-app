@@ -30,10 +30,4 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 1.6rem;
 }
-.layout{
-    display: flex;
-}
-#app {
-  flex: 1;
-  
-}
+

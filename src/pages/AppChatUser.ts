@@ -8,7 +8,10 @@ export class AppChatUser extends HTMLElement {
     }
     connectedCallback(){
         this.innerHTML = `
-            <div class="chat-user">
+        <div class="chat-user">
+            <app-chat-sidebar></app-chat-sidebar>
+
+            <div class="chat-user__container">
                 <div class = "chat-user__header">
                     <div class="chat-user__chatbox">
                         <div class="chat-user__perfil"></div>
@@ -112,7 +115,8 @@ export class AppChatUser extends HTMLElement {
             
             </div>    
             
-        
+        </div>
+
         
         `;
         const container = this.querySelector('.chat-user__container')!  ;

@@ -1,3 +1,4 @@
+import { AppPerfil} from '../pages/AppPerfil';
 import { routes } from './routes';
 type Route= keyof typeof routes;
 
@@ -19,10 +20,7 @@ export const router = {
         router.go(location.pathname as Route || "/", false);
     },
     go(route:Route,addHistory = true):void{
-        if(route === "/login" || route==="/register"){
-            const sidebar = document.querySelector(".chat-sidebar");
-            sidebar?.classList.add("chat-sidebar--oculto")
-        }
+        
         if(addHistory){
             history.pushState({route}, "", route);
         }
@@ -36,15 +34,30 @@ export const router = {
 
         let page;
 
-        if(component){
-            page = document.createElement(component);
+        // if(component){
+        //     if(component === "app-perfil"){
+                
+        //         const appPerfil = new AppPerfil({});
+                
+        //         page = appPerfil.element();
+        //         return;
+        //     }
+        //     console.log(page);
+            
+        //     page = document.createElement(component);
+        // }
+        // else{
+            
+        //     page = document.createElement("app-not-found");
+        // }
+
+        const appPerfil = new AppPerfil({});
+                
+        page = appPerfil.element();
+        if(page){
+            app.appendChild(page);
+
         }
-        else{
-            const sidebar = document.querySelector(".chat-sidebar");
-            sidebar?.classList.add("chat-sidebar--oculto")
-            page = document.createElement("app-not-found");
-        }
-        app.appendChild(page);
 
         window.scrollTo(0,0);
   
