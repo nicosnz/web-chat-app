@@ -1,18 +1,11 @@
+import { Block } from "../components/block/Block";
 
-export class Register extends HTMLElement{
+export class Register extends Block<{}>{
     
-    constructor() {
-        super();
-        
-    }
-
-    connectedCallback(){
-        this.innerHTML = `
-            <app-register-form></app-register-form>
-        
-        
-        `;
-    }
+    
+    protected template = `
+            {{{ FormRegister }}}
+    `;
 }
 
-customElements.define("app-register",Register);
+

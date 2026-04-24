@@ -1,18 +1,10 @@
+import { Block } from "../components/block/Block";
 
-export class Login extends HTMLElement{
-    
-    constructor() {
-        super();
-        
-    }
-
-    connectedCallback(){
-        this.innerHTML = `
-            <app-login-form></app-login-form>
+export class Login extends Block<{}>{
+    protected template = `
+            {{{ FormLogin }}}
         
         
-        `;
-    }
+    `;
 }
 
-customElements.define("app-login",Login);

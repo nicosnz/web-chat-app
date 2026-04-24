@@ -1,13 +1,9 @@
+import { Block } from "../block/Block";
 
-export class FormRegister extends HTMLElement{
+export class FormRegister extends Block<{}>{
+    static componentName = "FormRegister";    
     
-    constructor() {
-        super();
-        
-    }
-
-    connectedCallback(){
-        this.innerHTML = `
+    protected template: string = `
             <form class="form-register">
                 <h2 class="form-register__title">Registrate</h2>
                 <input class="form-register__input" type="email" placeholder="Correo electrónico">
@@ -24,7 +20,6 @@ export class FormRegister extends HTMLElement{
         
         
         `;
-    }
 }
 
-customElements.define("app-register-form",FormRegister);
+

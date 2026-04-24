@@ -1,15 +1,12 @@
+import { Block } from "../components/block/Block";
 
 
-export class AppChatUser extends HTMLElement {
+export class AppChatUser extends Block<{}> {
     
-    constructor() {
-        super();
-        
-    }
-    connectedCallback(){
-        this.innerHTML = `
-        <div class="chat-user">
-            <app-chat-sidebar></app-chat-sidebar>
+    static componentName = "AppChatUser";
+    protected template = 
+    `   <div class="chat-user">
+            {{{ ChatSidebar }}}
 
             <div class="chat-user__container">
                 <div class = "chat-user__header">
@@ -119,9 +116,10 @@ export class AppChatUser extends HTMLElement {
 
         
         `;
-        const container = this.querySelector('.chat-user__container')!  ;
-        container.scrollTop = container.scrollHeight;
-    }
+    // protected componentDidMount(): void {
+    //     const container = document.querySelector('.chat-user__container')!  ;
+    //     container.scrollTop = container.scrollHeight;
+    // }
+        
 }
 
-customElements.define("app-chat-user",AppChatUser);

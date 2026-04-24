@@ -1,88 +1,81 @@
-import Handlebars from 'handlebars';
-import chatBox from '../../partials/chat-box.hbs?raw'; 
-export class ChatSidebar extends HTMLElement {
-    
-    constructor() {
-        super();
-        
-    }
-    connectedCallback(){
-   
+import { Block } from '../block/Block';
+interface SidebarProps{
+    nombre:string;
+    mensaje:string;
+    hora:string;
+}
 
-        Handlebars.registerPartial("chatBox",chatBox);
-        const chatList = Handlebars.compile(`
-            {{#each chats}}
-                {{> chatBox}}
-            {{/each}}    
+export class ChatSidebar extends Block<{chats:SidebarProps[]}> {
+        static componentName = "ChatSidebar";
+        constructor(){
+            super({
+                chats:[
+                {
+                    nombre:"Emanuel",
+                    mensaje:"Hola como tas",
+                    hora:"12:00"
+                },
+                {
+                    nombre:"Gustav",
+                    mensaje:"Hola como tas",
+                    hora:"11:00"
+                },
+                {
+                    nombre:"Nicosan",
+                    mensaje:"Hola como tas",
+                    hora:"10:43"
+                },
+                {
+                    nombre:"Ema",
+                    mensaje:"Hola como tas",
+                    hora:"10:42"
+                },
+                {
+                    nombre:"XD",
+                    mensaje:"Hola como tas",
+                    hora:"10:40"
 
-        `
-        )
-
-        const chats = [
-            {
-                nombre:"Emanuel",
-                mensaje:"Hola como tas",
-                hora:"12:00"
-            },
-            {
-                nombre:"Gustav",
-                mensaje:"Hola como tas",
-                hora:"11:00"
-            },
-            {
-                nombre:"Nicosan",
-                mensaje:"Hola como tas",
-                hora:"10:43"
-            },
-            {
-                nombre:"Ema",
-                mensaje:"Hola como tas",
-                hora:"10:42"
-            },
-            {
-                nombre:"XD",
-                mensaje:"Hola como tas",
-                hora:"10:40"
-
-            },
-            {
-                nombre:"Bro 2",
-                mensaje:"Hola como tas",
-                hora:"7:00"
-            },
-            {
-                nombre:"Bro 2",
-                mensaje:"Hola como tas",
-                hora:"7:00"
-            },
-            {
-                nombre:"Bro 2",
-                mensaje:"Hola como tas",
-                hora:"7:00"
-            },
-            {
-                nombre:"Bro 2",
-                mensaje:"Hola como tas",
-                hora:"7:00"
-            },
-            {
-                nombre:"Bro 2",
-                mensaje:"Hola como tas",
-                hora:"7:00"
-            },
-            {
-                nombre:"Bro 2",
-                mensaje:"Hola como tas",
-                hora:"7:00"
-            },
-            {
-                nombre:"Bro 2",
-                mensaje:"Hola como tas",
-                hora:"7:00"
-            },
-        ]
-        
-        this.innerHTML = `
+                },
+                {
+                    nombre:"Bro 2",
+                    mensaje:"Hola como tas",
+                    hora:"7:00"
+                },
+                {
+                    nombre:"Bro 2",
+                    mensaje:"Hola como tas",
+                    hora:"7:00"
+                },
+                {
+                    nombre:"Bro 2",
+                    mensaje:"Hola como tas",
+                    hora:"7:00"
+                },
+                {
+                    nombre:"Bro 2",
+                    mensaje:"Hola como tas",
+                    hora:"7:00"
+                },
+                {
+                    nombre:"Bro 2",
+                    mensaje:"Hola como tas",
+                    hora:"7:00"
+                },
+                {
+                    nombre:"Bro 2",
+                    mensaje:"Hola como tas",
+                    hora:"7:00"
+                },
+                {
+                    nombre:"Bro 2",
+                    mensaje:"Hola como tas",
+                    hora:"7:00"
+                },
+            ]
+            
+            })
+        }
+        protected template = `
             <div class="chat-sidebar">
                 <div class="chat-sidebar__links">
                     <a href="/perfil" class="chat-sidebar__perfil">Perfil ></a>
@@ -90,25 +83,17 @@ export class ChatSidebar extends HTMLElement {
                 </div>
                 
                 
-                <div class="chat-sidebar__chats"></div>
+                <div class="chat-sidebar__chats">
+                    {{#each chats}}
+                        {{{ Chatbox nombre=nombre mensaje=mensaje hora=hora}}}
+                    {{/each}}
+                </div>
             </div>
         
         
         `;
-        const $chatSidebar = document.querySelector<HTMLDivElement>(".chat-sidebar__chats");
-        if($chatSidebar){
-            const html = chatList({
-                chats
-            });
-            $chatSidebar.innerHTML=html;
-            
-        }
-
-        else{
-            console.log("burro");
-            
-        }
-    }
+        
+    
 }
 
-customElements.define("app-chat-sidebar",ChatSidebar);
+

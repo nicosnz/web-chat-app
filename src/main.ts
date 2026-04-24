@@ -1,17 +1,17 @@
 import { router } from "./services/router";
 import "../index.css";
 import "./components/formLogin/FormLogin";
-import "./pages/Login";
 import "./components/formRegister/FormRegister";
-import "./pages/Register";
-import "./components/chat-sidebar/ChatSidebar";
-import "./pages/AppChatGeneral";
-
-import "./pages/AppChatUser";
 import "./pages/404";
 import { registerComponent } from "./components/block/RegisterComponent";
-import { Button } from "./pages/AppPerfil";
-registerComponent(Button);
+import { Chatbox } from "./components/chat-box/ChatBox";
+import { ChatSidebar } from "./components/chat-sidebar/ChatSidebar";
+import { FormLogin } from "./components/formLogin/FormLogin";
+import { FormRegister } from "./components/formRegister/FormRegister";
 
+registerComponent(FormRegister);
+registerComponent(FormLogin);
+registerComponent(Chatbox);
+registerComponent(ChatSidebar);
 
-router.init();
+document.addEventListener("DOMContentLoaded",router.init)

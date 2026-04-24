@@ -1,17 +1,12 @@
+import { Block } from "../components/block/Block";
 import union from "/src/images/Union.png";
 
 
-export class AppChatGeneral extends HTMLElement {
-    
-    constructor() {
-        super();
-        
-    }
-    connectedCallback(){
-        this.innerHTML = `
-            <app-chat-sidebar></app-chat-sidebar>
+export class AppChatGeneral extends Block<{}> {
+    static componentName = "AppChatGeneral";
+    protected template = `
             <div class="chat-general">
-                <app-chat-sidebar></app-chat-sidebar>
+                {{{ ChatSidebar }}}
                 <div class="chat-general__select-chat">
                     <img class="chat-general__imagen" src="${union}">
                     <p class="chat-general__texto">Elige un chat para enviar el mensaje</p>
@@ -19,8 +14,6 @@ export class AppChatGeneral extends HTMLElement {
             </div>
         
         
-        `;
-    }
+        `
 }
 
-customElements.define("app-chat-general",AppChatGeneral);

@@ -1,26 +1,63 @@
 import { Block } from "../components/block/Block";
-
-
-
-export class Button extends Block<{label:string}>{
-    protected template: string = `<button>{{ label }}</button>`
-    static componentName = "Button";
-    protected events = {
-        click:(e:Event) => {
-            console.log("Hola desde handlebars");
-            
-        }
-    }
-}
 export class AppPerfil extends Block<{}>{
+    static componentName = "app-perfil";
     protected template: string = 
     `
-    <div>
-    <p>Hola</p>
-    {{{ Button label="Haz Click aqui" }}}
-    </div>
+        <div class="perfil">
+            <div class="perfil__nav">
+                <button class="perfil__atras">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="14" cy="14" r="14" transform="rotate(-180 14 14)" fill="#3369F3"/>
+                    <rect x="20" y="14.8" width="11" height="1.6" transform="rotate(-180 20 14.8)" fill="white"/>
+                    <path d="M13 19L9 14L13 9" stroke="white" stroke-width="1.6"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="perfil__content">
+                <div class="perfil__foto"></div>
+
+                <h2 class="perfil__nombre">Emanuel</h2>
+
+                <div class="perfil__info">
+                    <div class="perfil__info-item">
+                        <p>Correo Electrónico</p>
+                        <p>olysancheznicolas@gmail.com</p>
+                    </div>
+
+                    <div class="perfil__info-item">
+                        <p>Login</p>
+                        <p>emanuel123</p>
+                    </div>
+
+                    <div class="perfil__info-item">
+                        <p>Nombre</p>
+                        <p>Emanuel</p>
+                    </div>
+
+                    <div class="perfil__info-item">
+                        <p>Apellido</p>
+                        <p>Sanchez</p>
+                    </div>
+
+                    <div class="perfil__info-item">
+                        <p>Nombre en el chat</p>
+                        <p>EmaDev</p>
+                    </div>
+
+                    <div class="perfil__info-item">
+                        <p>Teléfono</p>
+                        <p>+591 70000000</p>
+                    </div>
+                </div>
+                <div class="perfil__acciones">
+                    <a class="perfil__acciones-datos">Cambiar datos</a>
+                    <a class="perfil__acciones-contraseña">Cambiar contraseña</a>
+                    <a class="perfil__acciones-salir">Salir</a>
+                </div>
+            </div>
+        </div>
+   
     `
-    static componentName = "app-perfil";
     
 }
 

@@ -1,4 +1,3 @@
-import { AppPerfil} from '../pages/AppPerfil';
 import { routes } from './routes';
 type Route= keyof typeof routes;
 
@@ -14,8 +13,8 @@ export const router = {
             const href = link.getAttribute("href") as Route;
             router.go(href);
         });
-        window.addEventListener("popstate", (e) => {
-            router.go(e.state?.route || "/", false);
+        window.addEventListener("popstate", () => {
+            router.go(location.pathname || "/", false);
         });
         router.go(location.pathname as Route || "/", false);
     },
@@ -34,30 +33,20 @@ export const router = {
 
         let page;
 
-        // if(component){
-        //     if(component === "app-perfil"){
-                
-        //         const appPerfil = new AppPerfil({});
-                
-        //         page = appPerfil.element();
-        //         return;
-        //     }
-        //     console.log(page);
-            
-        //     page = document.createElement(component);
-        // }
-        // else{
-            
-        //     page = document.createElement("app-not-found");
-        // }
-
-        const appPerfil = new AppPerfil({});
-                
-        page = appPerfil.element();
-        if(page){
-            app.appendChild(page);
-
+        if(component){
+            page = component.element();
         }
+        else{
+            
+            page = document.createElement("app-not-found");
+        }
+        
+        if(page){
+
+            app.appendChild(page);
+        }
+
+        
 
         window.scrollTo(0,0);
   

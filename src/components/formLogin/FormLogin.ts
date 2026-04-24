@@ -1,13 +1,10 @@
+import { Block } from "../block/Block";
 
-export class FormLogin extends HTMLElement{
+export class FormLogin extends Block<{}>{
+    static componentName = "FormLogin";
     
-    constructor() {
-        super();
-        
-    }
 
-    connectedCallback(){
-        this.innerHTML = `
+    protected template = `
             <form class="form">
                 <h2 class="form_title">Login</h2>
                 <input class="form_input" type="text" placeholder="Login">
@@ -18,8 +15,6 @@ export class FormLogin extends HTMLElement{
             </form>
         
         
-        `;
-    }
+    `;
 }
 
-customElements.define("app-login-form",FormLogin);
