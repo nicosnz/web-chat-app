@@ -2,7 +2,7 @@ import { Block } from "../components/block/Block";
 import union from "/src/images/Union.png";
 
 
-export class AppChatGeneral extends Block<{}> {
+export class AppChatGeneral extends Block {
     static componentName = "AppChatGeneral";
     protected template = `
             <div class="chat-general">

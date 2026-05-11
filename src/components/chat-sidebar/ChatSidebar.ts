@@ -1,11 +1,14 @@
-import { Block } from '../block/Block';
+import { Block, type BlockProps } from '../block/Block';
 interface SidebarProps{
     nombre:string;
     mensaje:string;
     hora:string;
 }
+interface Chats extends BlockProps{
+    chats:SidebarProps[]
+}
 
-export class ChatSidebar extends Block<{chats:SidebarProps[]}> {
+export class ChatSidebar extends Block<Chats> {
         static componentName = "ChatSidebar";
         constructor(){
             super({

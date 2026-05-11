@@ -1,6 +1,6 @@
 import { Block } from "../components/block/Block";
-export class AppPerfil extends Block{
-    static componentName = "app-perfil";
+export class ChangeData extends Block{
+    static componentName = "change-data";
     protected template: string = 
     `
         <div class="perfil">
@@ -14,54 +14,44 @@ export class AppPerfil extends Block{
                 </a>
             </div>
             <div class="perfil__content">
-                <input
-                    type="file"
-                    class="perfil__avatar-input"
-                    hidden
-                >
+                <div class="perfil__foto"></div>
 
-                <div class="perfil__foto">
-                    <span class="perfil__foto-overlay">
-                        Cambiar avatar
-                    </span>
-                </div>
-                <h2 class="perfil__nombre">Emanuel</h2>
 
-                <div class="perfil__info">
+                <form class="perfil__info">
                     <div class="perfil__info-item">
                         <p>Correo Electrónico</p>
-                        <p>olysancheznicolas@gmail.com</p>
+                        <input class="perfil__info-item--input" type="email" value="olysancheznicolas@gmail.com">
                     </div>
 
                     <div class="perfil__info-item">
                         <p>Login</p>
-                        <p>emanuel123</p>
+                        <input class="perfil__info-item--input" type="text" placeholder="Login" value="nicosnz">
                     </div>
 
                     <div class="perfil__info-item">
                         <p>Nombre</p>
-                        <p>Emanuel</p>
+                        <input class="perfil__info-item--input" type="text" placeholder="Nombre" value="Emanuel">
                     </div>
-
                     <div class="perfil__info-item">
                         <p>Apellido</p>
-                        <p>Sanchez</p>
+                        <input class="perfil__info-item--input" type="text" value="Oly">
                     </div>
 
                     <div class="perfil__info-item">
-                        <p>Nombre en el chat</p>
-                        <p>EmaDev</p>
+                        <p>Nombre en el Chat</p>
+                        <input class="perfil__info-item--input" type="text" placeholder="Nombre en el chat" value="nicosnz">
                     </div>
 
                     <div class="perfil__info-item">
-                        <p>Teléfono</p>
-                        <p>+591 70000000</p>
+                        <p>Teléfono Celular</p>
+                        <input class="perfil__info-item--input" type="text" placeholder="Teléfono Celular" value="+591 78448371">
                     </div>
-                </div>
+
+                   
+                </form>
                 <div class="perfil__acciones">
-                    <a href="/perfil/edit" class="perfil__acciones-datos">Cambiar datos</a>
-                    <a href="/perfil/edit/password" class="perfil__acciones-contraseña">Cambiar contraseña</a>
-                    <a class="perfil__acciones-salir">Salir</a>
+                    <button class="perfil__acciones--guardar">Guardar</button>
+                    
                 </div>
             </div>
         </div>

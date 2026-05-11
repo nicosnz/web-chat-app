@@ -1,7 +1,7 @@
 import { Block } from "../components/block/Block";
 
 
-export class AppChatUser extends Block<{}> {
+export class AppChatUser extends Block {
     
     static componentName = "AppChatUser";
     protected template = 
@@ -94,7 +94,7 @@ export class AppChatUser extends Block<{}> {
                             </svg>
                         </button>
                         
-                        <input class ="chat-user__input-text"type="text" placeholder="Mensaje">
+                        <input class ="chat-user__input-text "type="text" placeholder="Mensaje">
                         <button class="chat-user__send">
                             <svg xmlns="http://www.w3.org/2000/svg" 
                                 width="20" height="20" 
@@ -116,10 +116,7 @@ export class AppChatUser extends Block<{}> {
 
         
         `;
-    // protected componentDidMount(): void {
-    //     const container = document.querySelector('.chat-user__container')!  ;
-    //     container.scrollTop = container.scrollHeight;
-    // }
+    
         
 }
 

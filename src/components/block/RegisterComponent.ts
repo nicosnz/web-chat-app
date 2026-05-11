@@ -1,6 +1,6 @@
 import Handlebars from 'handlebars';
 import type {HelperOptions} from 'handlebars';
-import type { Block, BlockProps } from './Block';
+import type { Block} from './Block';
 
 let id = 0;
 type ComponentClass<Props extends object> = {

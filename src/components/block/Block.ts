@@ -1,6 +1,6 @@
 import Handlebars from 'handlebars';
 type ChildrenComponents = {
-    component:Block<object>;
+    component:Block<BlockProps>;
     embed(node:DocumentFragment):void;
 }
 export interface BlockProps{
@@ -10,10 +10,10 @@ type EventHandler = (e:Event) => void;
 type EventName = keyof HTMLElementEventMap;
 type EventType = Partial<Record<EventName,EventHandler>>;
 
-export abstract class Block <T extends object = BlockProps>{
+export abstract class Block <T extends BlockProps = BlockProps>{
     static componentName:string ="";
     protected abstract template:string;
-    protected props:T = {} as T & BlockProps;
+    protected props:T;
     private domElement:Element|null = null;
     protected events:EventType = {};
     protected children:Block<object>[] = [];

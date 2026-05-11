@@ -2,6 +2,8 @@ import type { Block } from "../components/block/Block";
 import { AppChatGeneral } from "../pages/AppChatGeneral";
 import { AppChatUser } from "../pages/AppChatUser";
 import { AppPerfil } from "../pages/AppPerfil";
+import { ChangeData } from "../pages/ChangeDataProfile";
+import { ChangePassword } from "../pages/ChangePasswordProfile";
 import { Login } from "../pages/Login";
 import { Register } from "../pages/Register";
 
@@ -12,5 +14,7 @@ export const routes:Routes = {
     "/chat":new AppChatUser({}),
     "/login":new Login({}),
     "/register":new Register({}),
-    "/perfil":new AppPerfil({})
+    "/perfil":new AppPerfil({}),
+    "/perfil/edit":new ChangeData({}),
+    "/perfil/edit/password":new ChangePassword({}),
 }

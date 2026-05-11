@@ -8,7 +8,6 @@ import { Chatbox } from "./components/chat-box/ChatBox";
 import { ChatSidebar } from "./components/chat-sidebar/ChatSidebar";
 import { FormLogin } from "./components/formLogin/FormLogin";
 import { FormRegister } from "./components/formRegister/FormRegister";
-
 registerComponent(FormRegister);
 registerComponent(FormLogin);
 registerComponent(Chatbox);
