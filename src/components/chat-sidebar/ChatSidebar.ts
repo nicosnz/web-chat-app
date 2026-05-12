@@ -1,4 +1,4 @@
-import { Block, type BlockProps } from '../block/Block';
+import { Block, type BlockProps } from '../../shared/model/block/Block';
 interface SidebarProps{
     nombre:string;
     mensaje:string;

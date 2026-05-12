@@ -1,4 +1,4 @@
-import { Block } from "../block/Block"
+import { Block } from "../../shared/model/block/Block"
 
 
 export class Chatbox extends Block<{nombre:string,mensaje:string,hora:string}>{

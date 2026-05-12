@@ -1,4 +1,4 @@
-import { Block } from "../block/Block";
+import { Block } from "../../../../shared/model/block/Block";
 
 export class FormLogin extends Block<{}>{
     static componentName = "FormLogin";

@@ -1,4 +1,4 @@
-import type { Block } from "../components/block/Block";
+import type { Block } from "../shared/model/block/Block";
 import { AppChatGeneral } from "../pages/AppChatGeneral";
 import { AppChatUser } from "../pages/AppChatUser";
 import { AppPerfil } from "../pages/AppPerfil";

@@ -1,4 +1,4 @@
-import { Block } from "../components/block/Block";
+import { Block } from "../shared/model/block/Block";
 export class ChangeData extends Block{
     static componentName = "change-data";
     protected template: string = 
